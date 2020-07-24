@@ -1,0 +1,17 @@
+<div class="container">
+  <h6>All <%= @cocktails.count %> cocktails</h6>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-md-4">
+        <div class="card">
+          <%= image_tag "https://www.entrenamiento.com/wp-content/uploads/2018/01/recetas-para-cocktails.jpg", class: "img-fluid" %>
+        </div>
+        <div class="card-footer">
+        <h3>
+          <%= link_to "#{cocktail["name"]}", cocktail_path(cocktail["id"]), id:"LinkTitle"%>
+        </h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

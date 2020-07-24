@@ -18,11 +18,12 @@ class CocktailsController < ApplicationController
     else
       render :new
     end
+
   end
 
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(%i(name))
+    params.require(:cocktail).permit([:name])
   end
 end
